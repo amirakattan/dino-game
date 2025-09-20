@@ -31,14 +31,26 @@
     </div>
 </body>
 
+
 <script>
-    document.onkeydown = function(evt) {
+document.onkeydown = function(evt) {
     evt = evt || window.event;
-    if (evt.keyCode == 32) {
-        var box = document.getElementById("messageBox");
-        box.style.visibility="hidden";
+    if (evt.keyCode == 32) { // Space bar
+        hideBox();
     }
 };
+
+// Also listen for clicks / taps
+document.addEventListener("click", hideBox);
+document.addEventListener("touchstart", hideBox);
+
+function hideBox() {
+    var box = document.getElementById("messageBox");
+    if (box) {
+        box.style.visibility = "hidden";
+    }
+}
 </script>
+
     
 </html>
