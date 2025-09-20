@@ -12,7 +12,7 @@
 
 <body id="t" class="offline">
     <div id="messageBox" class="sendmessage">
-         <h2 style="text-align: center;font-family: 'Open Sans', sans-serif;">Click to start</h2>
+         <h2 style="text-align: center;font-family: 'Open Sans', sans-serif;">Click inside the box to focus <br> Press Space to start</h2>
          <div class="niokbutton" onclick="okbuttonsend()"></div>
     </div>
     <div id="main-frame-error" class="interstitial-wrapper">
@@ -41,7 +41,6 @@ document.onkeydown = function(evt) {
 };
 
 // Also listen for clicks / taps
-document.addEventListener("click", hideBox);
 document.addEventListener("touchstart", hideBox);
 
 function hideBox() {
